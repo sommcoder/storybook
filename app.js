@@ -12,10 +12,9 @@ connectDB();
 const app = express();
 
 // set pug as the view engine
-app.engine();
 app.set("view engine", "pug");
 
-// assign a route file to our app
+// Routes
 app.use("/", require("./routes/index"));
 
 // if we're in development mode, log
