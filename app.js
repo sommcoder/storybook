@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
@@ -13,6 +14,9 @@ const app = express();
 
 // set pug as the view engine
 app.set("view engine", "pug");
+
+// static folder
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.use("/", require("./routes/index"));
