@@ -15,7 +15,7 @@ const app = express();
 // set pug as the view engine
 app.set("view engine", "pug");
 
-// static folder
+// static asset folder:
 app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
